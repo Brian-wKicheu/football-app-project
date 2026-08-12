@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+My Football Club Members
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>My Football Club Members</h1>
+   <h3>Members </h3>
+    
+    <p>Check out all our members!<a href="{% url 'members' %}">View Members</a></p>
+    
+</div>
+<div class="main-home">
+    <div>
+        <h3>Do you want to enjoy music?</h3>
+        <audio controls src="{% static 'media/Bracket YoriYori.mp3'%}">play</audio>
+    </div>
+    <div>
+        <h3>Watch video?</h3>
+        <video width="100%" height="auto" controls src="{% static 'media/Ayra Starr Rush.mp4'%}">play</video>
+    </div>
+</div>
+{% endblock %}

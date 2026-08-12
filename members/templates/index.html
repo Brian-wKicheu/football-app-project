@@ -1,0 +1,20 @@
+
+{% extends "master.html" %}
+{% load static %}
+{% block title %}Football Club Members{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Members </h2>
+   
+    <ul>
+        {% for member in members %}
+            <li><a href="{% url 'member_details' member.id %}">{{ member.firstname }} {{ member.lastname }}</a> - {{ member.phone }} - Joined on: {{ member.joined_date }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+    
+</body>
+</html>
